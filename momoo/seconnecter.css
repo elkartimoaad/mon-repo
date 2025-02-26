@@ -1,0 +1,75 @@
+body {
+  background-color: #000;
+  /* Noir */
+  color: #ffd700;
+  /* Doré */
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("image/location.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#loginForm {
+  background-color: #1a1a1a;
+  /* Noir profond */
+  border: 2px solid #ffd700;
+  /* Bordure dorée */
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+  /* Ombre dorée */
+}
+
+#loginForm label {
+  font-weight: bold;
+  color: #ffd700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#loginForm input,
+#loginForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ffd700;
+  border-radius: 4px;
+  background-color: #000;
+  color: #ffd700;
+}
+
+#loginForm input {
+  width: 93%;
+}
+
+#loginForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#loginForm button:hover {
+  background-color: #e6c200;
+  /* Variation dorée */
+}
+
+#error-message {
+  color: #ff4d4d;
+  /* Rouge pour les erreurs */
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identification - Your Car</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src=".vscode/images.png" alt="Your Car Logo" width="150" height="50">
+                <span>Your Car</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="vehicules.html">Véhicules</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="active">S'identifier</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="login" class="login-section">
+        <div class="login-container">
+            <h2>Identification</h2>
+            <form id="loginForm">
+                <label for="email">Adresse Email</label>
+                <input type="email" id="email" placeholder="Entrez votre email" required>
+
+                <label for="password">Mot de Passe</label>
+                <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+
+                <button type="submit" class="cta-button">Se Connecter</button>
+            </form>
+            <p class="signup-text">
+                Pas encore inscrit ? <a href="signup.html">Créer un compte</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Your Car</h3>
+                <p>Votre partenaire de confiance pour la location de véhicules au Maroc</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@yourcar.ma</p>
+                <p>Tél: +212 5XX-XXXXXX</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <p>Lun-Sam: 8h-19h</p>
+                <p>Dim: 9h-13h</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

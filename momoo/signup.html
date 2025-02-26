@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S'inscrire - Your Car</title>
+    <link href="s'inscrire.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <form id="signupForm" method="POST" action="#">
+      <label for="signup-email">Adresse Email</label>
+      <input
+        type="email"
+        id="signup-email"
+        name="email"
+        placeholder="Entrez votre email"
+        required
+      />
+
+      <label for="signup-password">Mot de Passe</label>
+      <input
+        type="password"
+        id="signup-password"
+        name="password"
+        placeholder="Entrez votre mot de passe"
+        required
+      />
+
+      <input type="hidden" id="signup-role" name="role" value="client" />
+
+      <button type="submit">S'inscrire</button>
+    </form>
+    <p id="signup-error-message" style="color: red"></p>
+  </body>
+</html>

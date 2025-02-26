@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Car - Location de Voitures au Maroc</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src=".vscode/images.png" alt="Your Car Logo" width="150" height="50">
+                <span>Your Car</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="vehicules.html">Véhicules</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="seconnecter.html">Se connecter</a></li>
+                <li><a href="s'inscrire.html">S'inscrire</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Location de Voitures au Maroc</h1>
+            <p class="hero-description">
+                Bienvenue chez Your Car, votre partenaire de confiance pour la location de voitures au Maroc. Nous proposons une large gamme de véhicules pour tous vos besoins, des citadines économiques aux SUV luxueux. Profitez de nos services dans toutes les grandes
+                villes du Maroc : Casablanca, Rabat, Marrakech, Tanger, et Agadir.
+            </p>
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="icon">🚗</i>
+                    <span>Véhicules neufs</span>
+                </div>
+                <div class="feature">
+                    <i class="icon">💰</i>
+                    <span>Meilleurs prix</span>
+                </div>
+                <div class="feature">
+                    <i class="icon">🔒</i>
+                    <span>Assurance incluse</span>
+                </div>
+                <div class="feature">
+                    <i class="icon">📍</i>
+                    <span>Livraison partout au Maroc</span>
+                </div>
+            </div>
+            <button class="cta-button">Réserver maintenant</button>
+        </div>
+    </section>
+
+    <section id="vehicules" class="vehicles">
+        <h2>Notre Flotte de Véhicules</h2>
+        <div class="vehicle-grid" id="vehicleGrid">
+            <!-- Les véhicules seront ajoutés dynamiquement via JavaScript -->
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Nos Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <i class="icon">🚗</i>
+                <h3>Location Courte Durée</h3>
+                <p>Idéal pour vos voyages d'affaires ou vacances</p>
+            </div>
+            <div class="service-card">
+                <i class="icon">📅</i>
+                <h3>Location Longue Durée</h3>
+                <p>Solutions adaptées aux entreprises</p>
+            </div>
+            <div class="service-card">
+                <i class="icon">🛡️</i>
+                <h3>Assurance Tous Risques</h3>
+                <p>Voyagez en toute sérénité</p>
+            </div>
+            <div class="service-card">
+                <i class="icon">🌍</i>
+                <h3>Service National</h3>
+                <p>Présent dans toutes les grandes villes du Maroc</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Nom complet" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Téléphone" required>
+            <select name="ville" required>
+                <option value="">Choisissez votre ville</option>
+                <option value="casablanca">Casablanca</option>
+                <option value="rabat">Rabat</option>
+                <option value="marrakech">Marrakech</option>
+                <option value="tanger">Tanger</option>
+                <option value="agadir">Agadir</option>
+            </select>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit" class="cta-button">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Your Car</h3>
+                <p>Votre partenaire de confiance pour la location de véhicules au Maroc</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@yourcar.ma</p>
+                <p>Tél: +212 5XX-XXXXXX</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <p>Lun-Sam: 8h-19h</p>
+                <p>Dim: 9h-13h</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="s'inscrire.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <form id="signupForm">
+      <label for="signup-email">Adresse Email</label>
+      <input
+        type="email"
+        id="signup-email"
+        placeholder="Entrez votre email"
+        required
+      />
+
+      <label for="signup-password">Mot de Passe</label>
+      <input
+        type="password"
+        id="signup-password"
+        placeholder="Entrez votre mot de passe"
+        required
+      />
+
+      <label for="signup-role">S'inscrire en tant que</label>
+      <select id="signup-role" required>
+        <option value="client">Utilisateur Client</option>
+        <option value="admin">Administrateur</option>
+      </select>
+
+      <button type="submit" class="cta-button">S'inscrire</button>
+    </form>
+    <p id="signup-error-message" style="color: red"></p>
+
+    <script>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const email = document.getElementById("signup-email").value;
+          const password = document.getElementById("signup-password").value;
+          const role = document.getElementById("signup-role").value;
+          const errorMessage = document.getElementById("signup-error-message");
+
+          // Vérifier si l'utilisateur existe déjà
+          const existingUsers = JSON.parse(localStorage.getItem("users")) || {};
+          if (existingUsers[email]) {
+            errorMessage.textContent = "Cet email est déjà utilisé.";
+            return;
+          }
+
+          // Ajouter le nouvel utilisateur au localStorage
+          existingUsers[email] = {
+            password,
+            role,
+          };
+          localStorage.setItem("users", JSON.stringify(existingUsers));
+
+          // Rediriger vers la page de connexion
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>

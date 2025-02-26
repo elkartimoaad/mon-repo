@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="seconnecter.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="background">
+      <form id="loginForm">
+        <label for="email">Adresse Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Entrez votre email"
+          required
+        />
+
+        <label for="password">Mot de Passe</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Entrez votre mot de passe"
+          required
+        />
+
+        <label for="role">Se connecter en tant que</label>
+        <select id="role" required>
+          <option value="client">Utilisateur Client</option>
+          <option value="admin">Administrateur</option>
+        </select>
+
+        <button type="submit" class="cta-button">Se Connecter</button>
+      </form>
+      <p id="error-message" style="color: red"></p>
+    </div>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const role = document.getElementById("role").value;
+          const errorMessage = document.getElementById("error-message");
+
+          // Récupérer les utilisateurs stockés dans le localStorage
+          const users = JSON.parse(localStorage.getItem("users")) || {};
+
+          if (
+            users[email] &&
+            users[email].password === password &&
+            users[email].role === role
+          ) {
+            // Stocker les informations de l'utilisateur dans le localStorage
+            localStorage.setItem(
+              "loggedInUser",
+              JSON.stringify({
+                email,
+                role,
+              })
+            );
+
+            // Rediriger vers la page appropriée
+            if (role === "admin") {
+              window.location.href = "index.html";
+            } else {
+              window.location.href = "index.html";
+            }
+          } else {
+            // Afficher un message d'erreur
+            errorMessage.textContent = "Email ou mot de passe incorrect.";
+          }
+        });
+    </script>
+  </body>
+</html>

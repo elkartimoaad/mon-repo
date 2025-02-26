@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Your Car</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src=".vscode/images.png" alt="Your Car Logo" width="150" height="50">
+                <span>Your Car</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="vehicules.html">Véhicules</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact page-section">
+        <h2>Réservation de Véhicule</h2>
+        <form id="contactForm" class="reservation-form">
+            <div class="form-columns">
+                <div class="form-column">
+                    <h3>Informations Personnelles</h3>
+                    <input type="text" placeholder="Nom complet" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Téléphone" required>
+                    <select name="ville" required>
+                        <option value="">Choisissez votre ville</option>
+                        <option value="casablanca">Casablanca</option>
+                        <option value="rabat">Rabat</option>
+                        <option value="marrakech">Marrakech</option>
+                        <option value="tanger">Tanger</option>
+                        <option value="agadir">Agadir</option>
+                    </select>
+                </div>
+                <div class="form-column">
+                    <h3>Détails de la Réservation</h3>
+                    <select name="vehicle" id="vehicleSelect" required>
+                        <option value="">Sélectionnez un véhicule</option>
+                        <!-- Les options seront ajoutées dynamiquement via JavaScript -->
+                    </select>
+                    <div class="date-inputs">
+                        <div class="date-input">
+                            <label>Date de début</label>
+                            <input type="date" name="startDate" required>
+                        </div>
+                        <div class="date-input">
+                            <label>Date de fin</label>
+                            <input type="date" name="endDate" required>
+                        </div>
+                    </div>
+                    <div class="selected-vehicle" id="selectedVehicle">
+                        <!-- Les détails du véhicule sélectionné seront affichés ici -->
+                    </div>
+                </div>
+            </div>
+            <textarea placeholder="Message ou demandes spéciales" required></textarea>
+            <button type="submit" class="cta-button">Réserver maintenant</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Your Car</h3>
+                <p>Votre partenaire de confiance pour la location de véhicules au Maroc</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@yourcar.ma</p>
+                <p>Tél: +212 5XX-XXXXXX</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <p>Lun-Sam: 8h-19h</p>
+                <p>Dim: 9h-13h</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,2 +1,11 @@
-# mon-repo
-site web location de voitures
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Projet</title>
+</head>
+<body>
+    <h1>Bonjour, Monde !</h1>
+</body>
+</html>
